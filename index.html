@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<h3>Sample Screen</h3>
+<input type="number" id="number">
+<input type="button" value="Add" onclick="addElement()">
+<input type="button" value="Display" onclick="display()">
+<hr>
+<p id="result"></p>
+<script>
+    let array = []
+    function addElement() {
+        let num = parseInt(document.getElementById("number").value)
+        array.push(num)
+        document.getElementById("number").value = ""
+    }
+
+    function display() {
+        let result = document.getElementById("result")
+        for (let i = 0; i < array.length; i++) {
+            result.innerHTML += "Element " + i + " = " + array[i] + "<br>";
+        }
+    }
+</script>
+</body>
+</html>
